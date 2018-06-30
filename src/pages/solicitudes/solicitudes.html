@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openSolicitud()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Solicitudes </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="color-backgroud">
+  <ion-card *ngFor="let solicitud of solicitudes" class="shape">
+    <ion-item>
+    </ion-item>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 text-left>
+            <h3 class="titulo">Origen</h3>
+            <p>{{solicitud.municipio_origen}}</p>
+            <h3 class="titulo">Fecha</h3>
+      <p>{{solicitud.fecha_inicio}}</p>
+          </ion-col>
+          <ion-col col-6 text-right>
+            <h3 class="titulo">Destino</h3>
+            <p>{{solicitud.municipio_destino}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button (click)="onEdit(solicitud)" ion-button icon-start clear small>
+          <ion-icon name="create"></ion-icon>
+          <div>Editar</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small (click)="onRemove(solicitud)">
+          <ion-icon name="trash"></ion-icon>
+          <div>Borrar</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
