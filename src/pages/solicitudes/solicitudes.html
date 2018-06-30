@@ -5,7 +5,7 @@
     </button>
     <ion-buttons end>
       <button ion-button icon-only (click)="openSolicitud()">
-        <ion-icon name="add"></ion-icon>
+        <ion-icon name="funnel"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>
@@ -23,7 +23,7 @@
             <h3 class="titulo">Origen</h3>
             <p>{{solicitud.municipio_origen}}</p>
             <h3 class="titulo">Fecha</h3>
-      <p>{{solicitud.fecha_inicio}}</p>
+            <p>{{solicitud.fecha_inicio}}</p>
           </ion-col>
           <ion-col col-6 text-right>
             <h3 class="titulo">Destino</h3>
@@ -31,19 +31,16 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-      
     </ion-card-content>
     <ion-row>
       <ion-col>
         <button (click)="onEdit(solicitud)" ion-button icon-start clear small>
-          <ion-icon name="create"></ion-icon>
-          <div>Editar</div>
+          <div>Aceptar</div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-start clear small (click)="onRemove(solicitud)">
-          <ion-icon name="trash"></ion-icon>
-          <div>Borrar</div>
+          <div>Detalles</div>
         </button>
       </ion-col>
     </ion-row>

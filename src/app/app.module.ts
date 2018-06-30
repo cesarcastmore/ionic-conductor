@@ -48,6 +48,7 @@ import { GoogleApiService } from '../services/google-api.service';
 import { FireStoreService, FireStoreRESTService } from '../services/firestore.service';
 import { HttpModule } from '@angular/http';
 import { Geolocation } from '@ionic-native/geolocation';
+import { ProgramasPage } from '../pages/programas/programas';
 
 
 export const firebaseConfig = {
@@ -72,7 +73,8 @@ import { PerfilPage } from '../pages/perfil/perfil';
     PerfilPage,
     MainPage,
     SolicitudesPage,
-    SolicitudPage
+    SolicitudPage,
+    ProgramasPage
   ],
   imports: [
     BrowserModule,
@@ -94,7 +96,8 @@ import { PerfilPage } from '../pages/perfil/perfil';
     PerfilPage,
     MainPage,
     SolicitudesPage,
-    SolicitudPage
+    SolicitudPage,
+    ProgramasPage
   ],
   providers: [
     StatusBar,
