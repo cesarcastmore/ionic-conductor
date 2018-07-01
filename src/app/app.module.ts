@@ -49,6 +49,8 @@ import { FireStoreService, FireStoreRESTService } from '../services/firestore.se
 import { HttpModule } from '@angular/http';
 import { Geolocation } from '@ionic-native/geolocation';
 import { ProgramasPage } from '../pages/programas/programas';
+import { ProgramaPage } from '../pages/programa/programa';
+import { FiltrosSolicitudesPage } from '../pages/filtros-solicitudes/filtros-solicitudes';
 
 
 export const firebaseConfig = {
@@ -74,7 +76,9 @@ import { PerfilPage } from '../pages/perfil/perfil';
     MainPage,
     SolicitudesPage,
     SolicitudPage,
-    ProgramasPage
+    ProgramasPage,
+    ProgramaPage,
+    FiltrosSolicitudesPage
   ],
   imports: [
     BrowserModule,
@@ -83,9 +87,7 @@ import { PerfilPage } from '../pages/perfil/perfil';
     AngularFirestoreModule.enablePersistence(), // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
-    HttpModule,
-
-
+    HttpModule
 
   ],
   bootstrap: [IonicApp],
@@ -97,7 +99,9 @@ import { PerfilPage } from '../pages/perfil/perfil';
     MainPage,
     SolicitudesPage,
     SolicitudPage,
-    ProgramasPage
+    ProgramasPage,
+    ProgramaPage,
+    FiltrosSolicitudesPage
   ],
   providers: [
     StatusBar,

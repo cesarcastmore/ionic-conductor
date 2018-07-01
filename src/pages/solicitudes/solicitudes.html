@@ -4,7 +4,7 @@
       <ion-icon name='menu'></ion-icon>
     </button>
     <ion-buttons end>
-      <button ion-button icon-only (click)="openSolicitud()">
+      <button ion-button icon-only (click)="onFilter()">
         <ion-icon name="funnel"></ion-icon>
       </button>
     </ion-buttons>
@@ -34,7 +34,7 @@
     </ion-card-content>
     <ion-row>
       <ion-col>
-        <button (click)="onEdit(solicitud)" ion-button icon-start clear small>
+        <button (click)="onAccept(solicitud)" ion-button icon-start clear small>
           <div>Aceptar</div>
         </button>
       </ion-col>

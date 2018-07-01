@@ -18,9 +18,25 @@ export class GoogleApiService {
         return item.json();
       });
 
+  }
+
+
+
+   directions(origen: any, destino: any): Observable < any > {
+
+   	let url="https://maps.googleapis.com/maps/api/directions/json"
+
+    return this.http.get(url + "?origin=" + origen.lat + "," + origen.lng + 
+    	"&destination=" + destino.lat + "," + origen.lng + 
+    	"&key=" + this.key)
+      .map(item => {
+        return item.json();
+      });
+
 
 
   }
+
 
 
 
